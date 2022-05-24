@@ -1,8 +1,10 @@
 import Header from "./ui/Header";
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "./ui/Theme";
 
 function App() {
 	return (
-		<div className='App'>
+		<ThemeProvider theme={theme}>
 			<Header />
 			Hello!
 			{[...new Array(120)]
@@ -13,7 +15,7 @@ Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
 				)
 				.join("\n")}
-		</div>
+		</ThemeProvider>
 	);
 }
 
